@@ -175,6 +175,7 @@ function createModal( item )
 }
 
 //-----------------------------------------------------------------[makeBooking]
+// function for "Book ticket" button click
 $(document).on( 'click', '.bookTicket', function()
 {
   let id = $(this).parent().parent().attr('id');
@@ -192,6 +193,8 @@ $(document).on( 'click', '.bookTicket', function()
 });
 
 //-----------------------------------------------------------------[saveDetails]
+// Adds info to localStorage
+// Update count in navbar
 function saveDetails()
 {
   let listNames = [];

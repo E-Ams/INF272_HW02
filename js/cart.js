@@ -5,9 +5,6 @@ function populateTable()
   let stringList = localStorage.getItem( "moviesInCart" );
 
   let list = JSON.parse( stringList );
-
-  console.log( list );
-
   let htmlList = document.getElementById( 'tableBody' );
   let newCart = "";
 
@@ -37,12 +34,12 @@ function createRow( item )
               "</button> " + item.title +
             "</td>" +
             "<td>R" + item.ticket_price + "</td>" +
-            "<td>" +
-              "<button class='btn btn-info btn-sm'>" +
+            "<td class='ticketCount'>" +
+              "<button class='btn btn-info btn-sm decrease'>" +
                 "<i class='fa-solid fa-arrow-left'></i>" +
               "</button> " +
               item.tickets_in_cart +
-              " <button class='btn btn-info btn-sm'>" +
+              " <button class='btn btn-info btn-sm increase'>" +
                 "<i class='fa-solid fa-arrow-right'></i>" +
               "</button>" +
             "</td>" +
